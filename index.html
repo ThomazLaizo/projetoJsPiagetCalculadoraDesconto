@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora de desconto</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="cartao">
+    <h1>Calculadora de desconto</h1>
+
+    <form id="formulario" novalidate>
+      <label for="valor">Valor da compra (R$)</label>
+      <input id="valor" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0,00" autofocus>
+      <p id="erro" class="erro" role="alert" hidden>Digite um valor maior ou igual a zero.</p>
+      <button type="submit">Calcular desconto</button>
+    </form>
+
+    <section class="recibo" aria-live="polite">
+      <dl>
+        <div class="linha">
+          <dt>Valor da compra</dt>
+          <dd id="compra">R$ 0,00</dd>
+        </div>
+        <div class="linha">
+          <dt>Desconto <span id="percentual"></span></dt>
+          <dd id="desconto"> 0,00</dd>
+        </div>
+        <div class="linha total">
+          <dt>Valor com desconto</dt>
+          <dd id="final">R$ 0,00</dd>
+        </div>
+      </dl>
+    </section>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
